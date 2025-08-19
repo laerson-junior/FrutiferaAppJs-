@@ -1,1 +1,52 @@
+.hero-section {
+    background-color: transparent; /* Deixe transparente para mostrar o fundo */
+    padding: 3rem 0;
+}
+
+.card {
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.add-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.age-badge {
+    font-size: 0.85rem;
+}
+
+
+.navbar-brand i {
+    color:red; 
+    margin-right: 8px;
+    font-size: 1.5rem;
+}
+body {
+    background-image: url('textura-de-folha-verde-fundo-de-textura-de-folha.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
 
