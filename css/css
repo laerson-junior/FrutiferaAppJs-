@@ -1,16 +1,36 @@
+/* Fundo do site */
+body {
+    background-image: url('textura-de-folha-verde-fundo-de-textura-de-folha.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Hero section transparente */
 .hero-section {
-    background-color: transparent; /* Deixe transparente para mostrar o fundo */
+    background: transparent !important;
     padding: 3rem 0;
 }
 
+/* Cards transparentes */
 .card {
+    background: rgba(255,255,255,0.7) !important; /* branco translúcido */
     transition: transform 0.3s;
     margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Modal transparente */
+.modal-content {
+    background: rgba(255,255,255,0.85) !important;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
 .carousel-item img {
@@ -36,17 +56,9 @@
     font-size: 0.85rem;
 }
 
-
 .navbar-brand i {
-    color:red; 
+    color: red; 
     margin-right: 8px;
     font-size: 1.5rem;
-}
-body {
-    background-image: url('textura-de-folha-verde-fundo-de-textura-de-folha.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
 }
 
