@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>safra da serra </title> <!--  o Título da página -->
-    <!-- Links para os estilos do Bootstrap e ícones -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>safra da serra </title> 
+    <!-- Título da página, descreve o propósito do site -->
+
+    <!-- Links para os estilos do Bootstrap e ícones usados -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="styles.css"> <!-- Arquivo de estilo personalizado -->
+    <link rel="stylesheet" href="styles.css"> 
+    <!-- Arquivo de estilo personalizado -->
 </head>
+
 <body>
 
-    <!--  a Barra de navegação -->
+    <!-- Barra de Navegação -->
+    
+    <!--  Barra de navegação utilizando o modelo do Bootstrap. Contém links para "Início" e "Fruteiras".
+         O nome do site é centralizado e um botão de menu é exibido em dispositivos móveis. 
+          Facilita o acesso rápido entre seções do site, da destaque as funções principais e deixa a navegação mais facil. -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <i class="bi bi-apple"></i> safra da serra <!-- Nome do site com ícone da maça -->
+                <i class="bi bi-apple"></i> safra da serra <!-- Nome do site com ícone -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span> <!-- Ícone de menu para dispositivo moveis -->
+                <span class="navbar-toggler-icon"></span> <!-- Ícone de menu para dispositivos móveis -->
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto"> <!-- Menu de navegação  -->
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#inicio">Início</a> <!-- Link para seção de início -->
+                        <a class="nav-link active" href="#inicio">Início</a> <!-- Link para a seção de início -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#fruteiras">Fruteiras</a> <!-- Link para seção de fruteiras -->
+                        <a class="nav-link" href="#fruteiras">Fruteiras</a> <!-- Link para a seção de fruteiras -->
                     </li>
                 </ul>
             </div>
@@ -34,11 +43,13 @@
     </nav>
 
     <!-- Seção inicial com carrossel de imagens -->
+    
+    <!-- Sintaticamente: O carrossel exibe imagens que ilustra o controle de safras. A navegação entre as imagens pode ser feita automaticamente ou manual. 
+         Semanticamente: Destaca as principal funcionalidade do site controle de produção e registro das fruteiras. -->
     <section id="inicio" class="hero-section">
         <div class="container">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner rounded">
-                    <!-- Cada item do carrossel -->
                     <div class="carousel-item active">
                         <img src="https://www.ufsm.br/app/uploads/sites/601/2022/06/Mamao-4-1024x683.jpg" class="d-block w-100" alt="Plantação de frutas">
                         <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
@@ -46,7 +57,7 @@
                             <p>Controle completo das suas fruteiras e produção</p> <!-- Descrição da imagem -->
                         </div>
                     </div>
-                    <!-- Mais itens do carrossel -->
+                    <!-- Adicionar mais itens do carrossel se for necessário -->
                 </div>
                 <!-- Botões de navegação do carrossel -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -58,45 +69,49 @@
                     <span class="visually-hidden">Próximo</span>
                 </button>
             </div>
-            
-            <!-- Cards explicativos sobre a aplicação -->
-            <div class="row mt-5">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <i class="bi bi-clipboard-data display-4 text-success"></i> <!-- Ícone da funcionalidade -->
-                            <h5 class="card-title mt-3">Controle de Produção</h5>
-                            <p class="card-text">Registre e acompanhe a produção de sua safra em kg.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
+    <!-- Cards explicativos sobre a aplicação -->
+    <!-- Utiliza os cards do Bootstrap pra ilustrar as funcionalidades  que o site oferece. 
+          Permite ao usuário entender rapidamente como usar o site, de forma visual. -->
+    <div class="row mt-5">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <i class="bi bi-clipboard-data display-4 text-success"></i> <!-- Ícone  -->
+                    <h5 class="card-title mt-3">Controle de Produção</h5>
+                    <p class="card-text">Registre e acompanhe a produção de sua safra em kg.</p> <!-- Descrição do controle da produção -->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Seção de Fruteiras Cadastradas -->
+    <!--  Exibe um alerta caso não haja fruteiras cadastradas e um container para exibição das fruteiras. 
+          Organiza e exibe as fruteiras cadastradas  permitindo ao usuário gerenciar as informações das fruteiras com facilidade. -->
     <section id="fruteiras" class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-4">Fruteiras Cadastradas</h2>
             <p class="text-center text-muted mb-5">Gerencie todas as fruteiras da sua propriedade rural</p>
-            <!-- Alerta de fruteiras não cadastradas -->
             <div id="no-plants-alert" class="alert alert-info d-none">
                 <i class="bi bi-info-circle"></i> Nenhuma fruteira cadastrada. Clique no botão <strong>+</strong> abaixo para adicionar a primeira.
             </div>
-            
-            <!-- Container para exibição das fruteiras -->
             <div id="plants-container" class="row">
-                <!-- As fruteiras serão listadas aqui via JavaScript -->
+                <!-- As fruteiras serão inseridas  aqui via JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- Botão para abrir modal de cadastro de fruteira -->
-    <button type="button" class="btn btn-success btn-lg add-btn" data-bs-toggle="modal" data-bs-target="#plantModal">
-        <i class="bi bi-plus"></i> <!-- Ícone de adicionar -->
+    <!-- Botão para abrir o modal de cadastro de fruteira -->
+    <!-- O botão com o ícone "+" abre o modal de cadastro.
+         Facilita o processo de adicionar  novas fruteiras -->n type="button" class="btn btn-success btn-lg add-btn" data-bs-toggle="modal" data-bs-target="#plantModal">
+        <i class="bi bi-plus"></i>
     </button>
 
     <!-- Modal de cadastro de fruteira -->
+    <!--  O modal permite ao usuário cadastrar uma nova fruteira inserindo dados como nome, produção e data de plantio.
+          O modal melhora a experiência do usuário ao permitir inserir dados novos sem sair da página  . -->
     <div class="modal fade" id="plantModal" tabindex="-1" aria-labelledby="plantModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -105,7 +120,6 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <!-- Formulário para cadastro da fruteira -->
                     <form id="plant-form">
                         <input type="hidden" id="plant-id"> <!-- ID oculto para edição -->
                         <!-- Campos do formulário -->
@@ -124,6 +138,9 @@
     </div>
 
     <!-- Rodapé do site -->
+    
+    <!-- O rodapé contém informações sobre direitos reservados.
+          Finaliza a página com informações legais e dá crédito ao site. -->
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container text-center">
             <p>direitos reservado - safra da serra</p>
@@ -131,8 +148,12 @@
         </div>
     </footer>
 
-    <!-- Scripts do Bootstrap (para funcionalidades de interação) e do JS  do site -->
+    <!-- Scripts do Bootstrap e JS do site -->
+    
+    <!--  Carrega e refencia os scripts necessários para as funcionar o Bootstrap e o script personalizado do site.
+           -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/index.js"></script>
 </body>
+
 </html>
